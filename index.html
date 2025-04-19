@@ -1,68 +1,191 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official portfolio for Kingbryden - Developer, Bot Creator, and SMM Expert." />
-  <title>Kingbryden | Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Bv5UnzhbZ5AdHDZjtpDo4TkDc9FsDd0TuYzbbJJP5QpS+d+qYJ8hfO/1zA72RBltHFzr87O3UpM3q8RzT1yeWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <link rel="icon" href="https://b2rbrand.com/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingbryden - Full Portfolio</title>
   <style>
-    html {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
       scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: radial-gradient(circle at center, #1a1a1a, #000);
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    #typewriter {
+      color: #00ffe0;
+    }
+    section {
+      padding: 2rem;
+    }
+    .skills, .socials, .projects, .timeline, .techstack {
+      margin-top: 2rem;
+    }
+    .skill-bar {
+      margin: 1rem 0;
+    }
+    .bar {
+      height: 10px;
+      border-radius: 20px;
+      background: #333;
+      margin-top: 0.2rem;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 20px;
+      background: #00ffe0;
+    }
+    .socials a {
+      display: block;
+      margin: 0.5rem 0;
+      color: #00ffe0;
+      text-decoration: none;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 0 10px rgba(0,255,224,0.2);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .timeline-item {
+      border-left: 2px solid #00ffe0;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    .tech-logo {
+      width: 40px;
+      margin: 0.5rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #25d366;
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <header class="text-center p-10 bg-gradient-to-r from-indigo-500 to-purple-600">
-    <h1 class="text-4xl md:text-5xl font-bold mb-2">Hi, I'm Kingbryden</h1>
-    <p class="text-xl">Developer | Bot Creator | SMM Panel Owner</p>
-    <div class="mt-4 space-x-4">
-      <a href="https://github.com/Kingbryden" class="hover:text-yellow-400"><i class="fab fa-github fa-2x"></i></a>
-      <a href="https://wa.me/255689997037" class="hover:text-green-400"><i class="fab fa-whatsapp fa-2x"></i></a>
-      <a href="https://t.me/B2rpanel" class="hover:text-blue-400"><i class="fab fa-telegram fa-2x"></i></a>
-      <a href="https://www.instagram.com/b2r_panel" class="hover:text-pink-400"><i class="fab fa-instagram fa-2x"></i></a>
-      <a href="https://www.tiktok.com/@b2r_panel" class="hover:text-white"><i class="fab fa-tiktok fa-2x"></i></a>
-      <a href="https://youtube.com/@b2r_panel" class="hover:text-red-500"><i class="fab fa-youtube fa-2x"></i></a>
-      <a href="https://x.com/b2r_panel" class="hover:text-blue-500"><i class="fab fa-twitter fa-2x"></i></a>
-      <a href="https://www.threads.net/@b2r_panel" class="hover:text-purple-400"><i class="fab fa-threads fa-2x"></i></a>
-      <a href="https://b2rbrand.com" class="hover:text-gray-300"><i class="fas fa-globe fa-2x"></i></a>
+<body>
+  <header>
+    <h1>Hello, I'm <span id="typewriter"></span></h1>
+    <p>Bot Developer | SMM Panel Owner | Tech Enthusiast</p>
+  </header>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      JavaScript
+      <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
     </div>
-  </header>  <section class="p-10" id="about">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-lg leading-relaxed">I’m Kingbryden, a passionate developer, bot creator, and the brain behind B2r Panel. I build powerful, user-friendly tools and platforms — especially in the SMM and automation space.</p>
-  </section>  <section class="p-10 bg-gray-800" id="projects">
-    <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-gray-700 p-6 rounded-lg">
-        <h3 class="text-2xl font-semibold">ALPHA-BOT</h3>
-        <p>A powerful WhatsApp bot with all features, built for automation and fun!</p>
-        <a href="https://github.com/Kingbryden/ALPHA-BOT" class="text-blue-400 hover:underline">View on GitHub</a>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-lg">
-        <h3 class="text-2xl font-semibold">B2r Panel</h3>
-        <p>An advanced and customizable SMM Panel platform, built for business scalability.</p>
-        <a href="https://b2rbrand.com" class="text-blue-400 hover:underline">Visit Website</a>
-      </div>
+    <div class="skill-bar">
+      Node.js
+      <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
     </div>
-  </section>  <section class="p-10" id="skills">
-    <h2 class="text-3xl font-bold mb-4">Skills & Tools</h2>
-    <div class="flex flex-wrap gap-3">
-      <span class="bg-indigo-600 px-3 py-1 rounded-full">JavaScript</span>
-      <span class="bg-purple-600 px-3 py-1 rounded-full">Node.js</span>
-      <span class="bg-blue-600 px-3 py-1 rounded-full">Tailwind CSS</span>
-      <span class="bg-gray-600 px-3 py-1 rounded-full">MongoDB</span>
-      <span class="bg-green-600 px-3 py-1 rounded-full">Render / Vercel</span>
+    <div class="skill-bar">
+      HTML & CSS
+      <div class="bar"><div class="bar-fill" style="width: 90%"></div></div>
     </div>
-  </section>  <section class="p-10 bg-gray-800" id="github">
-    <h2 class="text-3xl font-bold mb-4">GitHub Stats</h2>
-    <img src="https://github-readme-stats.vercel.app/api?username=Kingbryden&show_icons=true&theme=radical" class="mb-4" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kingbryden&layout=compact&theme=radical" />
-  </section>  <footer class="p-6 text-center bg-gray-900">
-    <p>&copy; 2025 Kingbryden. All rights reserved.</p>
-    <p>Made with passion and Tailwind CSS.</p>
-  </footer>  <script>
-    ScrollReveal().reveal('section', { delay: 100, duration: 1000, reset: true });
-  </script></body>
+  </section>
+
+  <section class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-card">
+      <h3>B2r Panel</h3>
+      <p>Fully featured SMM Panel with automation, payments, and custom admin UI.</p>
+    </div>
+    <div class="project-card">
+      <h3>ALPHA-BOT</h3>
+      <p>Multi-functional WhatsApp bot with commands, APIs, and dashboard.</p>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <h2>Experience</h2>
+    <div class="timeline-item">
+      <h4>2023 - Present</h4>
+      <p>Founder of B2r Panel | Lead Developer</p>
+    </div>
+    <div class="timeline-item">
+      <h4>2024</h4>
+      <p>Launched ALPHA-BOT | Built multiple automation tools</p>
+    </div>
+  </section>
+
+  <section class="techstack">
+    <h2>Tech Stack</h2>
+    <p>JavaScript, Node.js, Express, HTML, CSS, Git, MongoDB, PostgreSQL</p>
+  </section>
+
+  <section class="socials">
+    <h2>Connect with Me</h2>
+    <a href="https://t.me/B2rpanel" target="_blank">Telegram</a>
+    <a href="https://www.instagram.com/b2r_panel" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@b2r_panel" target="_blank">TikTok</a>
+    <a href="https://youtube.com/@b2r_panel" target="_blank">YouTube</a>
+    <a href="https://x.com/b2r_panel" target="_blank">X (Twitter)</a>
+    <a href="https://www.threads.net/@b2r_panel" target="_blank">Threads</a>
+    <a href="https://b2rbrand.com" target="_blank">Website</a>
+    <a href="https://wa.me/255689997037" target="_blank">WhatsApp</a>
+  </section>
+
+  <a href="https://wa.me/255689997037" class="whatsapp-float">Chat on WhatsApp</a>
+
+  <script>
+    const typewriter = document.getElementById('typewriter');
+    const words = ["Kingbryden", "Bot Developer", "SMM Panel Owner", "Platform Builder"];
+    let i = 0;
+    let j = 0;
+    let currentWord = [];
+    let isDeleting = false;
+
+    function loop() {
+      typewriter.innerHTML = currentWord.join('');
+      if (i < words.length) {
+        if (!isDeleting && j <= words[i].length) {
+          currentWord.push(words[i][j]);
+          j++;
+        }
+
+        if (isDeleting && j > 0) {
+          currentWord.pop();
+          j--;
+        }
+
+        if (j === words[i].length) {
+          isDeleting = true;
+        }
+
+        if (isDeleting && j === 0) {
+          currentWord = [];
+          isDeleting = false;
+          i = (i + 1) % words.length;
+        }
+      }
+      setTimeout(loop, isDeleting ? 50 : 100);
+    }
+    loop();
+  </script>
+</body>
 </html>
