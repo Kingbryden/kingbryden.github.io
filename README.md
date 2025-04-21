@@ -118,4 +118,4 @@ Check out this GIF that shows the magic behind my **SMM Panel** interface:
 
 ---
 
-♧ 2025 King bryden 2025.All rights reserved.
+♧ 2025 King bryden.All rights reserved.
