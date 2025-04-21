@@ -1,42 +1,60 @@
-# 👑 King Bryden - Portfolio
+<h1 align="center">Hi there, I'm King Bryden 👑</h1>
+<h3 align="center">Creative Developer | Automation Expert | Branding Pro</h3>
 
-Welcome to my personal portfolio repository. I’m a passionate developer, designer, and digital creator who builds powerful web experiences, automation bots, and branded platforms.
-
-![GitHub Profile Banner](https://github.com/Kingbryden.png)
-
----
-
-## 🧠 About Me
-
-Hi, I'm **King Bryden**, a creative and results-driven developer with experience in:
-- Full-stack web development
-- WhatsApp bot engineering
-- SMM panel creation
-- Brand identity and UI/UX design
-
-I'm always learning, building, and exploring new tech!
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Kingbryden&label=Profile%20views&color=0e75b6&style=flat" alt="Kingbryden" />
+</p>
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 About Me
 
-### [ALPHA-BOT](https://github.com/Kingbryden/ALPHA-BOT)
-A powerful WhatsApp bot with full automation, AI replies, admin panel, and command system.
-
-### [B2r Panel](https://b2rbrand.com)
-A fully-featured SMM Panel with real payment integration and WhatsApp automation.
+- 🔧 I build custom **WhatsApp bots, SMM panels**, and branded platforms  
+- 🎨 Skilled in **UI/UX design, web automation**, and **full-stack development**  
+- ⚙️ Currently working on: **ALPHA-BOT Phase 3 with Admin Panel**  
+- 🌐 Website: [b2rbrand.com](https://b2rbrand.com)  
+- 💡 Fun fact: I turn ideas into smart, branded tech solutions!
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Skills & Tools
 
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node-dot-js&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+
+---
+
+## 🌟 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Kingbryden&show_icons=true&theme=tokyonight" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kingbryden&layout=compact&theme=tokyonight" height="165"/>
+</p>
+
+---
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Kingbryden&theme=radical&no-bg=true" />
+</p>
+
+---
+
+## 🔥 My Projects
+
+- [ALPHA-BOT](https://github.com/Kingbryden/ALPHA-BOT) – Full WhatsApp Bot with Admin Panel, AI, and Auto Commands  
+- [B2r Panel](https://b2rbrand.com) – Independent SMM Panel with full backend and WhatsApp support  
+- [Suhail-Md-3 Clone](https://github.com/Kingbryden/Suhail-Md-3) – High-performance command-based bot template
 
 ---
 
@@ -44,20 +62,30 @@ A fully-featured SMM Panel with real payment integration and WhatsApp automation
 
 [![Email](https://img.shields.io/badge/Email-bryden@b2rbrand.com-red?style=for-the-badge&logo=gmail)](mailto:bryden@b2rbrand.com)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/255689997037)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/b2r_panel)
+[![Threads](https://img.shields.io/badge/Threads-black?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.net/@b2r_panel)
 [![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@b2r_panel)
 [![TikTok](https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok)](https://www.tiktok.com/@b2r_panel)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/b2r_panel)
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/b2r_panel)
-[![Threads](https://img.shields.io/badge/Threads-black?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.net/@b2r_panel)
 
 ---
 
-## ✨ Fun Fact
+## 🎥 Latest YouTube Uploads
 
-> “Creativity is my superpower. Whether it's bots, panels, or design—I make it *clean*, *smart*, and *brand-worthy*.”
+<!-- YOUTUBE:START -->
+- Coming soon: integrated auto feed using GitHub Actions!
+<!-- YOUTUBE:END -->
 
 ---
 
-## ⭐️ Show Some Love
+## ✨ Quote
 
-If you like what I do, feel free to ⭐️ this repo and follow me on [GitHub @Kingbryden](https://github.com/Kingbryden)!
+> "Your brand is not just a logo — it's your digital *power move.* I build tech that *represents you.*"
+
+---
+
+## ⭐ Support My Work
+
+If you like what I do, **give me a star** and follow for more projects!
+
+[![GitHub Followers](https://img.shields.io/github/followers/Kingbryden?label=Follow&style=social)](https://github.com/Kingbryden)
