@@ -52,6 +52,14 @@ Custom-built SMM panel with:
 
 ---
 
+## 🎥 Animation Showcase
+
+Here’s a quick GIF showing how my **ALPHA-BOT** works in real-time:
+
+![ALPHA-BOT Demo](https://media.giphy.com/media/l3q2pZHeuwYbDJ0Ac/giphy.gif)
+
+---
+
 ## 📈 GitHub Stats
 
 <p align="center">
@@ -99,6 +107,14 @@ I turn caffeine and ideas into full-scale products. Let’s build something amaz
 ## 👁️‍🗨️ Visitor Count
 
 ![Visitor Count](https://profile-counter.glitch.me/Kingbryden/count.svg)
+
+---
+
+## 💬 Animations and GIFs
+
+Check out this GIF that shows the magic behind my **SMM Panel** interface:
+
+![SMM Panel Demo](https://media.giphy.com/media/3oFzmr37zSrl7AqVq8/giphy.gif)
 
 ---
 
