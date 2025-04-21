@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>King Bryden | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/8f9c43e32e.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0d3d6b81d6.js" crossorigin="anonymous"></script>
   <style>
     * {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
@@ -19,73 +20,108 @@
     }
     header {
       background: #000;
-      padding: 20px;
+      padding: 25px 0;
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
     header h1 {
+      font-size: 2.8rem;
       color: #00ffd5;
-      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
     }
     nav a {
       color: #fff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
+      transition: 0.3s;
     }
     nav a:hover {
       color: #00ffd5;
     }
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 80px 20px;
     }
     .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400') no-repeat center/cover;
       text-align: center;
-      background: #1a1a1a;
-      padding: 100px 20px;
+      padding: 150px 20px;
     }
     .hero h2 {
-      font-size: 2.5rem;
-      color: #00ffd5;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 5px #000;
     }
     .typing {
-      font-size: 1.2rem;
-      color: #fff;
-      margin-top: 10px;
+      color: #00ffd5;
+      font-size: 1.5rem;
+      min-height: 40px;
     }
     .card {
       background: #1e1e1e;
-      border-radius: 10px;
-      padding: 30px;
+      padding: 40px;
+      border-radius: 15px;
       margin-top: 30px;
       box-shadow: 0 0 10px rgba(0,255,213,0.1);
     }
+    .card:hover {
+      box-shadow: 0 0 25px rgba(0,255,213,0.3);
+    }
     h2 {
       color: #00ffd5;
+      font-size: 2rem;
       margin-bottom: 15px;
+    }
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-shadow: 0 0 5px #00ffd5;
+    }
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: 20px 0;
+      border: 3px solid #00ffd5;
+      box-shadow: 0 0 15px #00ffd5;
     }
     .contact-icons {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      gap: 30px;
       margin-top: 20px;
     }
     .contact-icons a {
       font-size: 1.8rem;
-      color: #00ffd5;
+      color: #fff;
       transition: 0.3s;
     }
     .contact-icons a:hover {
-      color: #00ccb0;
+      color: #00ffd5;
+      transform: scale(1.2);
     }
     footer {
       text-align: center;
       padding: 40px 20px;
       background: #0d0d0d;
       color: #888;
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .typing {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -107,26 +143,28 @@
 
   <section id="about" class="card">
     <h2>About Me</h2>
-    <img src="https://github.com/Kingbryden.png" alt="GitHub Profile" style="width: 120px; border-radius: 50%; box-shadow: 0 0 10px #00ffd5; margin-bottom: 20px;">
-    <p>Hello! I’m King Bryden, a creative developer passionate about coding, design, and building top-tier digital experiences. From smart bots to powerful web panels, I turn ideas into real impact.</p>
+    <img src="https://github.com/Kingbryden.png" alt="GitHub Avatar" class="profile-pic">
+    <p>Hello! I’m <strong>King Bryden</strong>, a passionate developer who builds creative bots, web apps, and digital experiences. I turn ideas into powerful projects that work like magic.</p>
   </section>
 
   <section id="projects" class="card">
     <h2>Projects</h2>
-    <h3>ALPHA-BOT</h3>
-    <p>Smart WhatsApp Bot with AI, admin panel, and full command system. View on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank" style="color:#00ffd5;">GitHub</a>.</p>
-    <h3 style="margin-top: 20px;">B2r Panel</h3>
-    <p>Complete SMM Panel with real payment integration and WhatsApp automation. Live at <a href="https://b2rbrand.com" target="_blank" style="color:#00ffd5;">b2rbrand.com</a>.</p>
+    <div>
+      <h3>ALPHA-BOT</h3>
+      <p>AI-powered WhatsApp Bot with admin panel. Check it out on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">GitHub</a>.</p>
+    </div>
+    <div style="margin-top: 20px;">
+      <h3>B2r Panel</h3>
+      <p>Modern SMM Panel with full backend and WhatsApp integration. Live at <a href="https://b2rbrand.com" target="_blank">b2rbrand.com</a>.</p>
+    </div>
   </section>
 
   <section id="contact" class="card">
-    <h2>Contact Me</h2>
+    <h2>Contact</h2>
     <div class="contact-icons">
-      <a href="mailto:bryden@b2rbrand.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/255689997037" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://github.com/Kingbryden" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://t.me/B2rpanel" title="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
-      <a href="https://www.instagram.com/b2r_panel" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:bryden@b2rbrand.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/255689997037" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/Kingbryden" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
     </div>
   </section>
 
@@ -140,6 +178,7 @@
 
     function typeEffect() {
       document.getElementById('typing').textContent = current.join('');
+
       if (!isDeleting && j <= words[i].length) {
         current.push(words[i][j]);
         j++;
@@ -147,15 +186,18 @@
         current.pop();
         j--;
       }
+
       if (j === words[i].length) {
         isDeleting = true;
         setTimeout(typeEffect, 1000);
         return;
       }
+
       if (j === 0 && isDeleting) {
         isDeleting = false;
         i = (i + 1) % words.length;
       }
+
       setTimeout(typeEffect, isDeleting ? 50 : 100);
     }
     typeEffect();
