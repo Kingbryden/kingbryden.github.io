@@ -14,110 +14,78 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
+      background: #111;
       color: #fff;
     }
     header {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 25px 0;
+      background: #000;
+      padding: 20px;
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 100;
     }
     header h1 {
-      font-size: 2.5rem;
       color: #00ffd5;
+      font-size: 2.5rem;
     }
     nav a {
       color: #fff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
     }
     nav a:hover {
       color: #00ffd5;
-      text-shadow: 0 0 5px #00ffd5;
     }
     section {
-      padding: 80px 20px;
-      max-width: 1100px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
     .hero {
       text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
-                  url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400') no-repeat center/cover;
+      background: #1a1a1a;
+      padding: 100px 20px;
     }
     .hero h2 {
-      font-size: 3rem;
-      color: #fff;
-      margin-bottom: 10px;
+      font-size: 2.5rem;
+      color: #00ffd5;
     }
     .typing {
-      color: #00ffd5;
-      font-size: 1.5rem;
-      min-height: 40px;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-top: 10px;
     }
     .card {
-      background: #1a1a1a;
-      border-radius: 15px;
+      background: #1e1e1e;
+      border-radius: 10px;
       padding: 30px;
       margin-top: 30px;
-      box-shadow: 0 0 15px rgba(0,255,213,0.1);
-    }
-    .card:hover {
-      box-shadow: 0 0 25px rgba(0,255,213,0.3);
+      box-shadow: 0 0 10px rgba(0,255,213,0.1);
     }
     h2 {
-      font-size: 2rem;
       color: #00ffd5;
       margin-bottom: 15px;
     }
-    .profile-img {
-      width: 120px;
-      border-radius: 50%;
-      margin: 20px 0;
-      box-shadow: 0 0 15px #00ffd5;
-    }
-    a {
-      color: #00ffd5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-shadow: 0 0 8px #00ffd5;
-    }
     .contact-icons {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-top: 25px;
+      gap: 20px;
+      margin-top: 20px;
     }
     .contact-icons a {
-      font-size: 2.2rem;
-      transition: 0.3s ease;
+      font-size: 1.8rem;
+      color: #00ffd5;
+      transition: 0.3s;
     }
     .contact-icons a:hover {
-      color: #fff;
-      transform: scale(1.2);
-      text-shadow: 0 0 10px #00ffd5;
+      color: #00ccb0;
     }
     footer {
       text-align: center;
       padding: 40px 20px;
       background: #0d0d0d;
       color: #888;
-    }
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-      .typing {
-        font-size: 1.1rem;
-      }
     }
   </style>
 </head>
@@ -139,42 +107,28 @@
 
   <section id="about" class="card">
     <h2>About Me</h2>
-    <img src="https://github.com/Kingbryden.png" alt="King Bryden GitHub Profile" class="profile-img">
-    <p>Hello! I’m <strong>King Bryden</strong>, a creative developer passionate about coding, design, bots, and building high-impact digital tools like SMM panels and intelligent WhatsApp bots.</p>
+    <img src="https://github.com/Kingbryden.png" alt="GitHub Profile" style="width: 120px; border-radius: 50%; box-shadow: 0 0 10px #00ffd5; margin-bottom: 20px;">
+    <p>Hello! I’m King Bryden, a creative developer passionate about coding, design, and building top-tier digital experiences. From smart bots to powerful web panels, I turn ideas into real impact.</p>
   </section>
 
   <section id="projects" class="card">
     <h2>Projects</h2>
-    <div class="item">
-      <h3>ALPHA-BOT</h3>
-      <p>A smart WhatsApp bot with AI responses, admin panel, auto-commands and more. Check it on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">GitHub</a>.</p>
-    </div>
-    <div class="item" style="margin-top: 20px;">
-      <h3>B2r Panel</h3>
-      <p>Fully independent SMM Panel with real payment gateways and automation. Visit <a href="https://b2rbrand.com" target="_blank">b2rbrand.com</a>.</p>
-    </div>
+    <h3>ALPHA-BOT</h3>
+    <p>Smart WhatsApp Bot with AI, admin panel, and full command system. View on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank" style="color:#00ffd5;">GitHub</a>.</p>
+    <h3 style="margin-top: 20px;">B2r Panel</h3>
+    <p>Complete SMM Panel with real payment integration and WhatsApp automation. Live at <a href="https://b2rbrand.com" target="_blank" style="color:#00ffd5;">b2rbrand.com</a>.</p>
   </section>
 
   <section id="contact" class="card">
-  <h2>Contact</h2>
-  <div class="contact-icons">
-    <a href="mailto:bryden@b2rbrand.com" title="Email" target="_blank">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://wa.me/255689997037" title="WhatsApp" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://github.com/Kingbryden" title="GitHub" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://t.me/B2rpanel" title="Telegram" target="_blank">
-      <i class="fab fa-telegram"></i>
-    </a>
-    <a href="https://www.instagram.com/b2r_panel" title="Instagram" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-</section>
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:bryden@b2rbrand.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/255689997037" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/Kingbryden" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/B2rpanel" title="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://www.instagram.com/b2r_panel" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 King Bryden. All rights reserved.</p>
@@ -186,7 +140,6 @@
 
     function typeEffect() {
       document.getElementById('typing').textContent = current.join('');
-
       if (!isDeleting && j <= words[i].length) {
         current.push(words[i][j]);
         j++;
@@ -194,18 +147,15 @@
         current.pop();
         j--;
       }
-
       if (j === words[i].length) {
         isDeleting = true;
         setTimeout(typeEffect, 1000);
         return;
       }
-
       if (j === 0 && isDeleting) {
         isDeleting = false;
         i = (i + 1) % words.length;
       }
-
       setTimeout(typeEffect, isDeleting ? 50 : 100);
     }
     typeEffect();
