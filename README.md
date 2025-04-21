@@ -118,4 +118,4 @@ Check out this GIF that shows the magic behind my **SMM Panel** interface:
 
 ---
 
-Want me to add more features like animations, special sections, or badges? Let me know!
+♧ 2025 King bryden 2025.All rights reserved.
