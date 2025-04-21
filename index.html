@@ -1,191 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kingbryden - Full Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>King Bryden | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f0f0f;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: #0e0e0e; color: #fff; }
+
     header {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    header h1 { color: #00ffd5; font-weight: 600; }
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { color: #00ffd5; }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #111, #0e0e0e), url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1400') no-repeat center/cover;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       text-align: center;
-      background: radial-gradient(circle at center, #1a1a1a, #000);
+      color: white;
+      padding: 0 20px;
     }
-    h1 {
+    .hero h2 {
       font-size: 3rem;
+      margin-bottom: 10px;
     }
-    #typewriter {
-      color: #00ffe0;
+    .typing {
+      color: #00ffd5;
+      font-size: 1.5rem;
+      height: 30px;
     }
+
     section {
-      padding: 2rem;
+      padding: 100px 20px 60px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .skills, .socials, .projects, .timeline, .techstack {
-      margin-top: 2rem;
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0,255,213,0.1);
+      transition: transform 0.3s;
     }
-    .skill-bar {
-      margin: 1rem 0;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,255,213,0.3);
     }
-    .bar {
-      height: 10px;
-      border-radius: 20px;
-      background: #333;
-      margin-top: 0.2rem;
+
+    a.btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00ffd5;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .bar-fill {
-      height: 100%;
-      border-radius: 20px;
-      background: #00ffe0;
+    a.btn:hover {
+      background: #00ccb0;
+    }
+
+    .socials {
+      margin-top: 20px;
     }
     .socials a {
-      display: block;
-      margin: 0.5rem 0;
-      color: #00ffe0;
+      color: #00ffd5;
+      margin-right: 15px;
+      font-size: 1.5rem;
       text-decoration: none;
     }
-    .project-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 1rem;
-      margin: 1rem 0;
-      box-shadow: 0 0 10px rgba(0,255,224,0.2);
-      transition: transform 0.3s ease;
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111;
+      color: #888;
     }
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-    .timeline-item {
-      border-left: 2px solid #00ffe0;
-      padding-left: 1rem;
-      margin: 1rem 0;
-    }
-    .tech-logo {
-      width: 40px;
-      margin: 0.5rem;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px #25d366;
+
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 2rem; }
+      .typing { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Hello, I'm <span id="typewriter"></span></h1>
-    <p>Bot Developer | SMM Panel Owner | Tech Enthusiast</p>
+    <h1>King Bryden</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <div class="skill-bar">
-      JavaScript
-      <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
-    </div>
-    <div class="skill-bar">
-      Node.js
-      <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
-    </div>
-    <div class="skill-bar">
-      HTML & CSS
-      <div class="bar"><div class="bar-fill" style="width: 90%"></div></div>
+  <section class="hero">
+    <h2>Hi, I'm King Bryden</h2>
+    <div class="typing" id="typing"></div>
+    <a href="#contact" class="btn">Let's Connect</a>
+  </section>
+
+  <section id="about">
+    <div class="card" data-animate>
+      <h2>About Me</h2>
+      <p>I’m a creative full-stack developer passionate about tech, bots, design, and building useful online tools like ALPHA-BOT and the B2r Panel.</p>
     </div>
   </section>
 
-  <section class="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-card">
-      <h3>B2r Panel</h3>
-      <p>Fully featured SMM Panel with automation, payments, and custom admin UI.</p>
-    </div>
-    <div class="project-card">
-      <h3>ALPHA-BOT</h3>
-      <p>Multi-functional WhatsApp bot with commands, APIs, and dashboard.</p>
+  <section id="projects">
+    <div class="card" data-animate>
+      <h2>Projects</h2>
+      <p><strong>ALPHA-BOT:</strong> Smart WhatsApp Bot with AI + Admin Panel — <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">GitHub</a></p>
+      <p><strong>B2r Panel:</strong> Full-featured SMM Panel — <a href="https://b2rbrand.com" target="_blank">Website</a></p>
     </div>
   </section>
 
-  <section class="timeline">
-    <h2>Experience</h2>
-    <div class="timeline-item">
-      <h4>2023 - Present</h4>
-      <p>Founder of B2r Panel | Lead Developer</p>
+  <section id="contact">
+    <div class="card" data-animate>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:bryden@b2rbrand.com" style="color:#00ffd5">bryden@b2rbrand.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/255689997037" style="color:#00ffd5">+255689997037</a></p>
+      <div class="socials">
+        <a href="https://github.com/Kingbryden">GitHub</a>
+        <a href="https://www.instagram.com/b2r_panel">Instagram</a>
+        <a href="https://t.me/B2rpanel">Telegram</a>
+      </div>
     </div>
-    <div class="timeline-item">
-      <h4>2024</h4>
-      <p>Launched ALPHA-BOT | Built multiple automation tools</p>
-    </div>
   </section>
 
-  <section class="techstack">
-    <h2>Tech Stack</h2>
-    <p>JavaScript, Node.js, Express, HTML, CSS, Git, MongoDB, PostgreSQL</p>
-  </section>
-
-  <section class="socials">
-    <h2>Connect with Me</h2>
-    <a href="https://t.me/B2rpanel" target="_blank">Telegram</a>
-    <a href="https://www.instagram.com/b2r_panel" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@b2r_panel" target="_blank">TikTok</a>
-    <a href="https://youtube.com/@b2r_panel" target="_blank">YouTube</a>
-    <a href="https://x.com/b2r_panel" target="_blank">X (Twitter)</a>
-    <a href="https://www.threads.net/@b2r_panel" target="_blank">Threads</a>
-    <a href="https://b2rbrand.com" target="_blank">Website</a>
-    <a href="https://wa.me/255689997037" target="_blank">WhatsApp</a>
-  </section>
-
-  <a href="https://wa.me/255689997037" class="whatsapp-float">Chat on WhatsApp</a>
+  <footer>
+    <p>&copy; 2025 King Bryden. All rights reserved.</p>
+  </footer>
 
   <script>
-    const typewriter = document.getElementById('typewriter');
-    const words = ["Kingbryden", "Bot Developer", "SMM Panel Owner", "Platform Builder"];
-    let i = 0;
-    let j = 0;
-    let currentWord = [];
-    let isDeleting = false;
+    const words = ["Bot Developer", "Full Stack Coder", "Web Designer", "Brand Strategist"];
+    let i = 0, j = 0, current = [], isDeleting = false;
 
-    function loop() {
-      typewriter.innerHTML = currentWord.join('');
-      if (i < words.length) {
-        if (!isDeleting && j <= words[i].length) {
-          currentWord.push(words[i][j]);
-          j++;
-        }
+    function typeEffect() {
+      document.getElementById('typing').textContent = current.join('');
 
-        if (isDeleting && j > 0) {
-          currentWord.pop();
-          j--;
-        }
-
-        if (j === words[i].length) {
-          isDeleting = true;
-        }
-
-        if (isDeleting && j === 0) {
-          currentWord = [];
-          isDeleting = false;
-          i = (i + 1) % words.length;
-        }
+      if (!isDeleting && j <= words[i].length) {
+        current.push(words[i][j]);
+        j++;
+      } else if (isDeleting && j >= 0) {
+        current.pop();
+        j--;
       }
-      setTimeout(loop, isDeleting ? 50 : 100);
+
+      if (j === words[i].length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000);
+        return;
+      }
+
+      if (j === 0 && isDeleting) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+      }
+
+      setTimeout(typeEffect, isDeleting ? 50 : 100);
     }
-    loop();
+    typeEffect();
+
+    const animated = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition = "all 0.6s ease";
+          entry.target.style.transform = "translateY(0)";
+          entry.target.style.opacity = 1;
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animated.forEach(el => {
+      el.style.transform = "translateY(30px)";
+      el.style.opacity = 0;
+      observer.observe(el);
+    });
   </script>
+
 </body>
 </html>
