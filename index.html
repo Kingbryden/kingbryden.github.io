@@ -4,21 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>King Bryden | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #111; color: #fff; }
-    header { background: #1a1a1a; padding: 20px; text-align: center; }
-    header h1 { font-size: 2.5rem; color: #00ffd5; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-    nav a:hover { color: #00ffd5; }
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    .hero { background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400') no-repeat center/cover; padding: 100px 20px; text-align: center; }
-    .hero h2 { font-size: 3rem; color: #fff; text-shadow: 2px 2px #000; }
-    .about, .projects, .contact { background: #1e1e1e; margin-top: 20px; border-radius: 10px; }
-    .projects .item, .contact div { margin-top: 15px; }
-    footer { text-align: center; padding: 20px; background: #111; color: #666; }
-    button { padding: 10px 20px; background: #00ffd5; border: none; cursor: pointer; border-radius: 5px; }
-    button:hover { background: #00ccb0; }
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 25px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ffd5;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00ffd5;
+      text-shadow: 0 0 5px #00ffd5;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400') no-repeat center/cover;
+      text-align: center;
+      padding: 150px 20px;
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #000;
+    }
+    .typing {
+      color: #00ffd5;
+      font-size: 1.5rem;
+      min-height: 40px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 30px;
+      box-shadow: 0 0 10px rgba(0,255,213,0.1);
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 0 25px rgba(0,255,213,0.3);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #00ffd5;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      text-shadow: 0 0 8px #00ffd5;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #00ffd5;
+      color: #111;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #00ccb0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0d0d0d;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .typing {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -34,36 +142,67 @@
 
   <section class="hero">
     <h2>Welcome to My Portfolio</h2>
-    <p>Creative Developer | Designer | Dream Builder</p>
+    <div class="typing" id="typing"></div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="card">
     <h2>About Me</h2>
-    <p>Hello! I’m King Bryden, a creative mind passionate about coding, design, and building awesome digital experiences. I love turning ideas into real, working projects.</p>
+    <p>Hello! I’m King Bryden, a creative developer passionate about coding, design, and building top-tier digital experiences. From smart bots to powerful web panels, I turn ideas into real impact.</p>
   </section>
 
-  <section id="projects" class="projects">
+  <section id="projects" class="card">
     <h2>Projects</h2>
     <div class="item">
       <h3>ALPHA-BOT</h3>
-      <p>A WhatsApp bot with AI, admin panel, and smart commands. View on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank" style="color: #00ffd5;">GitHub</a>.</p>
+      <p>Smart WhatsApp Bot with AI, admin panel, and full command system. View on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">GitHub</a>.</p>
     </div>
-    <div class="item">
+    <div class="item" style="margin-top: 20px;">
       <h3>B2r Panel</h3>
-      <p>Custom SMM Panel with full backend and WhatsApp integration. See it live at <a href="https://b2rbrand.com" target="_blank" style="color: #00ffd5;">b2rbrand.com</a>.</p>
+      <p>Complete SMM Panel with real payment integration and WhatsApp automation. Live at <a href="https://b2rbrand.com" target="_blank">b2rbrand.com</a>.</p>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="card">
     <h2>Contact</h2>
-    <div>Email: <a href="mailto:bryden@b2rbrand.com" style="color: #00ffd5;">bryden@b2rbrand.com</a></div>
-    <div>WhatsApp: <a href="https://wa.me/255689997037" style="color: #00ffd5;">+255689997037</a></div>
-    <div>GitHub: <a href="https://github.com/Kingbryden" style="color: #00ffd5;">@Kingbryden</a></div>
+    <p>Email: <a href="mailto:bryden@b2rbrand.com">bryden@b2rbrand.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/255689997037">+255689997037</a></p>
+    <p>GitHub: <a href="https://github.com/Kingbryden">@Kingbryden</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 King Bryden. All rights reserved.</p>
   </footer>
+
+  <script>
+    const words = ["Creative Developer", "Bot Engineer", "SMM Panel Builder", "Web Designer"];
+    let i = 0, j = 0, current = [], isDeleting = false;
+
+    function typeEffect() {
+      document.getElementById('typing').textContent = current.join('');
+
+      if (!isDeleting && j <= words[i].length) {
+        current.push(words[i][j]);
+        j++;
+      } else if (isDeleting && j >= 0) {
+        current.pop();
+        j--;
+      }
+
+      if (j === words[i].length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000);
+        return;
+      }
+
+      if (j === 0 && isDeleting) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+      }
+
+      setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+    typeEffect();
+  </script>
 
 </body>
 </html>
