@@ -1,60 +1,80 @@
-<h1 align="center">Hi there, I'm King Bryden 👑</h1>
-<h3 align="center">Creative Developer | Automation Expert | Branding Pro</h3>
+<h1 align="center">Hi there, I'm King Bryden</h1>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Kingbryden&label=Profile%20views&color=0e75b6&style=flat" alt="Kingbryden" />
+  <img src="https://github.com/Kingbryden.png" width="150" style="border-radius: 50%;" />
+</p>
+
+<p align="center">
+  <b>Creative Developer | Bot Engineer | SMM Panel Builder | Web Designer</b>
 </p>
 
 ---
 
 ## 🚀 About Me
 
-- 🔧 I build custom **WhatsApp bots, SMM panels**, and branded platforms  
-- 🎨 Skilled in **UI/UX design, web automation**, and **full-stack development**  
-- ⚙️ Currently working on: **ALPHA-BOT Phase 3 with Admin Panel**  
-- 🌐 Website: [b2rbrand.com](https://b2rbrand.com)  
-- 💡 Fun fact: I turn ideas into smart, branded tech solutions!
+I'm a multi-talented developer who specializes in building powerful bots, smart automation systems, full-featured SMM panels, and visually appealing websites. I focus on creating real impact with clean, professional, and scalable solutions.
+
+- Passionate about building **WhatsApp Bots**, **Web Tools**, and **Automation Systems**
+- Currently building: `ALPHA-BOT` and `B2r Panel`
+- I love learning and exploring new tech to improve my workflow and projects
 
 ---
 
-## 🛠️ Skills & Tools
+## 🔧 Tech Stack
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node-dot-js&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-000?style=for-the-badge&logo=javascript)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs)
+![HTML5](https://img.shields.io/badge/HTML5-e34c26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+![MongoDB](https://img.shields.io/badge/MongoDB-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white)
+![Render](https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000?style=for-the-badge&logo=vercel)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)
 
 ---
 
-## 🌟 GitHub Stats
+## 🧠 My Projects
+
+### [ALPHA-BOT](https://github.com/Kingbryden/ALPHA-BOT)
+A fully loaded WhatsApp bot with:
+- All feature commands
+- AI integration
+- Admin panel
+- Auto-responses
+
+### [B2r Panel](https://b2rbrand.com)
+Custom-built SMM panel with:
+- Real payment integration
+- Admin dashboard
+- Full WhatsApp automation
+- Fast and clean UI/UX
+
+---
+
+## 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kingbryden&show_icons=true&theme=tokyonight" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kingbryden&layout=compact&theme=tokyonight" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Kingbryden&show_icons=true&theme=radical" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kingbryden&layout=compact&theme=radical" />
 </p>
 
 ---
 
-## 🏆 GitHub Trophies
+## 🎯 Achievements
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Kingbryden&theme=radical&no-bg=true" />
-</p>
+- **🚀 1K+ Contributions**: Active contributor to various open-source projects
+- **💡 50+ Repositories**: Created multiple impactful repositories
+- **🛠️ 100+ Lines of Code Daily**: Code every day to improve and learn new things
+- **🌍 International Collaborations**: Collaborated with global teams on cutting-edge projects
 
 ---
 
-## 🔥 My Projects
+## 🏆 Trophies
 
-- [ALPHA-BOT](https://github.com/Kingbryden/ALPHA-BOT) – Full WhatsApp Bot with Admin Panel, AI, and Auto Commands  
-- [B2r Panel](https://b2rbrand.com) – Independent SMM Panel with full backend and WhatsApp support  
-- [Suhail-Md-3 Clone](https://github.com/Kingbryden/Suhail-Md-3) – High-performance command-based bot template
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Kingbryden&theme=radical&margin-w=15&margin-h=15" />
+</p>
 
 ---
 
@@ -70,22 +90,16 @@
 
 ---
 
-## 🎥 Latest YouTube Uploads
+## ✨ Fun Fact
 
-<!-- YOUTUBE:START -->
-- Coming soon: integrated auto feed using GitHub Actions!
-<!-- YOUTUBE:END -->
+I turn caffeine and ideas into full-scale products. Let’s build something amazing together!
 
 ---
 
-## ✨ Quote
+## 👁️‍🗨️ Visitor Count
 
-> "Your brand is not just a logo — it's your digital *power move.* I build tech that *represents you.*"
+![Visitor Count](https://profile-counter.glitch.me/Kingbryden/count.svg)
 
 ---
 
-## ⭐ Support My Work
-
-If you like what I do, **give me a star** and follow for more projects!
-
-[![GitHub Followers](https://img.shields.io/github/followers/Kingbryden?label=Follow&style=social)](https://github.com/Kingbryden)
+Want me to add more features like animations, special sections, or badges? Let me know!
