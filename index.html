@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>King Bryden | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/0d3d6b81d6.js" crossorigin="anonymous"></script>
   <style>
     * {
@@ -14,126 +15,193 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #111;
-      color: #fff;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
     header {
       background: #000;
-      padding: 25px 0;
-      text-align: center;
-      position: sticky;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 255, 213, 0.1);
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2rem;
       color: #00ffd5;
-    }
-    nav {
-      margin-top: 10px;
+      font-weight: 700;
     }
     nav a {
-      color: #fff;
+      color: #e0e0e0;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      font-size: 1rem;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #00ffd5;
     }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-    }
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 150px 20px;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400') no-repeat center/cover;
+      padding: 0 20px;
     }
     .hero h2 {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      font-weight: 700;
       margin-bottom: 15px;
-      text-shadow: 1px 1px 5px #000;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     }
-    .typing {
-      color: #00ffd5;
+    .hero .typing {
       font-size: 1.5rem;
-      min-height: 40px;
+      color: #00ffd5;
+      min-height: 30px;
+      font-weight: 300;
     }
     .card {
-      background: #1e1e1e;
+      background: #1a1a1a;
       padding: 40px;
-      border-radius: 15px;
-      margin-top: 30px;
-      box-shadow: 0 0 10px rgba(0,255,213,0.1);
+      border-radius: 12px;
+      margin: 40px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 20px rgba(0, 255, 213, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
-      box-shadow: 0 0 25px rgba(0,255,213,0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 255, 213, 0.3);
     }
-    h2 {
+    section h2 {
       color: #00ffd5;
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    a {
-      color: #00ffd5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-shadow: 0 0 5px #00ffd5;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
     }
     .profile-pic {
-      width: 130px;
-      height: 130px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin: 20px 0;
+      margin: 20px auto;
+      display: block;
       border: 3px solid #00ffd5;
-      box-shadow: 0 0 15px #00ffd5;
+      box-shadow: 0 0 15px rgba(0, 255, 213, 0.5);
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    .about-content p {
+      max-width: 600px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    .project-card h3 {
+      color: #00ffd5;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      font-size: 0.9rem;
+      color: #ccc;
     }
     .contact-icons {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 10px;
       margin-top: 20px;
     }
-    .contact-icons a {
-      font-size: 1.8rem;
-      color: #fff;
-      transition: 0.3s;
+    .contact-icons a img {
+      height: 32px;
+      transition: transform 0.3s ease;
     }
-    .contact-icons a:hover {
-      color: #00ffd5;
-      transform: scale(1.2);
+    .contact-icons a:hover img {
+      transform: scale(1.1);
     }
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
       background: #0d0d0d;
-      color: #888;
+      color: #666;
+      font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .hero h2 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
-      .typing {
-        font-size: 1.1rem;
+      .hero .typing {
+        font-size: 1.2rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .hero .typing {
+        font-size: 1rem;
+      }
+      .card {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>King Bryden</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-container">
+      <h1>King Bryden</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
@@ -143,83 +211,90 @@
 
   <section id="about" class="card">
     <h2>About Me</h2>
-    <img src="https://github.com/Kingbryden.png" alt="GitHub Avatar" class="profile-pic">
-    <p>Hello! I’m <strong>King Bryden</strong>, a passionate developer who builds creative bots, web apps, and digital experiences. I turn ideas into powerful projects that work like magic.</p>
+    <div class="about-content">
+      <img src="https://github.com/Kingbryden.png" alt="GitHub Avatar" class="profile-pic">
+      <p>I'm <strong>King Bryden</strong>, a passionate full-stack developer and CEO of B2r Brand. I specialize in building creative bots, scalable web apps, and seamless digital experiences. From AI-driven platforms to SMM automation, I turn ideas into reality with innovation and precision.</p>
+    </div>
   </section>
 
   <section id="projects" class="card">
     <h2>Projects</h2>
-    <div>
-      <h3>ALPHA-BOT</h3>
-      <p>AI-powered WhatsApp Bot with admin panel. Check it out on <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">GitHub</a>.</p>
-    </div>
-    <div style="margin-top: 20px;">
-      <h3>B2r Panel</h3>
-      <p>Modern SMM Panel with full backend and WhatsApp integration. Live at <a href="https://b2rbrand.com" target="_blank">b2rbrand.com</a>.</p>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>ALPHA-BOT</h3>
+        <p>An AI-powered WhatsApp bot with a robust admin panel, designed for seamless automation. <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">View on GitHub</a>.</p>
+      </div>
+      <div class="project-card">
+        <h3>B2r Panel</h3>
+        <p>A modern SMM panel with full backend and WhatsApp integration for social media growth. <a href="https://b2rbrand.com" target="_blank">Visit Live</a>.</p>
+      </div>
+      <div class="project-card">
+        <h3>Dating Platform</h3>
+        <p>AI-driven matchmaking platform with a custom backend for meaningful connections. <a href="https://b2rbrand.site" target="_blank">Explore Now</a>.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact" class="card">
-  <h2>Connect with Me</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
-    <a href="mailto:bryden@b2rbrand.com" target="_blank">
-      <img src="https://img.shields.io/badge/Email-bryden@b2rbrand.com-red?style=for-the-badge&logo=gmail" alt="Email Badge">
-    </a>
-    <a href="https://wa.me/255689997037" target="_blank">
-      <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Badge">
-    </a>
-    <a href="https://www.threads.net/@b2r_panel" target="_blank">
-      <img src="https://img.shields.io/badge/Threads-black?style=for-the-badge&logo=threads&logoColor=white" alt="Threads Badge">
-    </a>
-    <a href="https://youtube.com/@b2r_panel" target="_blank">
-      <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Badge">
-    </a>
-    <a href="https://www.tiktok.com/@b2r_panel" target="_blank">
-      <img src="https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok" alt="TikTok Badge">
-    </a>
-    <a href="https://www.instagram.com/b2r_panel" target="_blank">
-      <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge">
-    </a>
-    <a href="https://x.com/b2r_panel" target="_blank">
-      <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="X Badge">
-    </a>
-  </div>
-</section>
+    <h2>Connect with Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:bryden@b2rbrand.com" target="_blank">
+        <img src="https://img.shields.io/badge/Email-bryden@b2rbrand.com-red?style=for-the-badge&logo=gmail" alt="Email Badge">
+      </a>
+      <a href="https://wa.me/255689997037" target="_blank">
+        <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Badge">
+      </a>
+      <a href="https://www.threads.net/@b2r_panel" target="_blank">
+        <img src="https://img.shields.io/badge/Threads-black?style=for-the-badge&logo=threads&logoColor=white" alt="Threads Badge">
+      </a>
+      <a href="https://youtube.com/@b2r_panel" target="_blank">
+        <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Badge">
+      </a>
+      <a href="https://www.tiktok.com/@b2r_panel" target="_blank">
+        <img src="https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok" alt="TikTok Badge">
+      </a>
+      <a href="https://www.instagram.com/b2r_panel" target="_blank">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge">
+      </a>
+      <a href="https://x.com/b2r_panel" target="_blank">
+        <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="X Badge">
+      </a>
+      <a href="https://www.linkedin.com/in/kingbryden" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+      </a>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 King Bryden. All rights reserved.</p>
+    <p>&copy; 2025 King Bryden. Built with ❤️ in Tanzania.</p>
   </footer>
 
   <script>
-    const words = ["Creative Developer", "Bot Engineer", "SMM Panel Builder", "Web Designer"];
+    const words = ["Full-Stack Developer", "Bot Engineer", "SMM Innovator", "UI/UX Designer", "AI Enthusiast"];
     let i = 0, j = 0, current = [], isDeleting = false;
 
     function typeEffect() {
       document.getElementById('typing').textContent = current.join('');
-
-      if (!isDeleting && j <= words[i].length) {
+      if (!isDeleting && j < words[i].length) {
         current.push(words[i][j]);
         j++;
       } else if (isDeleting && j >= 0) {
         current.pop();
         j--;
       }
-
       if (j === words[i].length) {
         isDeleting = true;
-        setTimeout(typeEffect, 1000);
+        setTimeout(typeEffect, 1200);
         return;
       }
-
       if (j === 0 && isDeleting) {
         isDeleting = false;
         i = (i + 1) % words.length;
       }
-
       setTimeout(typeEffect, isDeleting ? 50 : 100);
     }
     typeEffect();
   </script>
-
 </body>
 </html>
+```
