@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>King Bryden | Cyber Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <title>King Bryden | Dynamic Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/0d3d6b81d6.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -15,30 +14,59 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: #0a0a1a;
-      color: #e0e0e0;
+      font-family: 'Montserrat', sans-serif;
+      background: #1e1e3e;
+      color: #f0f0f0;
       line-height: 1.6;
-      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
     }
-    nav {
-      position: fixed;
-      top: 20px;
-      right: 20px;
+    body.light-mode {
+      background: #f5f5fa;
+      color: #333;
+    }
+    body.neon-mode {
+      background: #0a0a1a;
+      color: #ff6f00;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(45deg, #ff6f00, #ff3d00);
+      padding: 20px;
       z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
-    nav a {
-      color: #00f0ff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      transition: color 0.3s ease, transform 0.3s ease;
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav a:hover {
-      color: #ff00ff;
-      transform: scale(1.1);
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 111, 0, 0.7);
+    }
+    .theme-switcher {
+      display: flex;
+      gap: 10px;
+    }
+    .theme-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #fff;
+      color: #ff6f00;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .theme-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 111, 0, 0.4);
     }
     .hero {
       height: 100vh;
@@ -47,58 +75,74 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      background: linear-gradient(135deg, rgba(30, 30, 62, 0.8), rgba(255, 111, 0, 0.2));
       position: relative;
       overflow: hidden;
     }
-    #particles-js {
+    .hero::before {
+      content: '';
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
       left: 0;
-      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 111, 0, 0.3), transparent);
+      animation: pulse 8s infinite;
     }
     .hero h2 {
-      font-size: 5rem;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 0 0 20px #00f0ff, 0 0 40px #ff00ff;
-      animation: neonGlow 2s infinite alternate;
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: #ff6f00;
+      text-shadow: 0 0 20px rgba(255, 111, 0, 0.8);
+      animation: fadeIn 1.5s ease-out;
     }
     .hero .typing {
       font-size: 1.8rem;
-      color: #ff00ff;
-      min-height: 35px;
-      font-weight: 400;
-      text-shadow: 0 0 10px #ff00ff;
+      color: #fff;
+      min-height: 40px;
+      font-weight: 300;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
     .card {
-      background: rgba(20, 20, 40, 0.7);
-      backdrop-filter: blur(10px);
-      padding: 40px;
+      background: #2a2a4e;
+      padding: 50px;
       border-radius: 20px;
       margin: 80px auto;
       max-width: 1100px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
-      animation: fadeIn 1s ease-out;
+      box-shadow: 0 8px 30px rgba(255, 111, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card.light-mode {
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+    .card.neon-mode {
+      background: #1a1a3a;
+      border: 1px solid #ff6f00;
+      box-shadow: 0 0 30px rgba(255, 111, 0, 0.5);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(255, 111, 0, 0.4);
     }
     section h2 {
-      color: #00f0ff;
+      color: #ff6f00;
       font-size: 2.8rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 30px;
       text-align: center;
-      text-shadow: 0 0 10px #00f0ff;
+      text-shadow: 0 0 10px rgba(255, 111, 0, 0.5);
     }
     .profile-pic {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       margin: 20px auto;
       display: block;
-      border: 3px solid #ff00ff;
-      box-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+      border: 4px solid #ff6f00;
+      box-shadow: 0 0 25px rgba(255, 111, 0, 0.6);
     }
     .about-content {
       display: flex;
@@ -111,113 +155,114 @@
     .about-content p {
       max-width: 650px;
       font-size: 1.2rem;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .resume-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #ff6f00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
       margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(255, 111, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .resume-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 111, 0, 0.6);
+    }
+    .skills-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
     }
     .skill-item {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .skill-item span {
-      color: #ff00ff;
-      font-size: 1.1rem;
-    }
-    .progress-bar {
-      background: #333;
-      height: 10px;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-    .progress {
-      background: linear-gradient(90deg, #00f0ff, #ff00ff);
-      height: 100%;
-      transition: width 1s ease-in-out;
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-    .project-card {
-      background: rgba(20, 20, 40, 0.8);
-      padding: 25px;
+      flex: 0 0 200px;
+      background: #3a3a5e;
+      padding: 20px;
       border-radius: 15px;
-      border: 1px solid rgba(0, 240, 255, 0.3);
-      cursor: pointer;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #ff6f00;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
-      perspective: 1000px;
+      scroll-snap-align: center;
     }
-    .project-card-inner {
+    .skill-item.light-mode {
+      background: #e0e0e0;
+      color: #333;
+    }
+    .skill-item.neon-mode {
+      background: #0a0a1a;
+      border: 1px solid #ff6f00;
+    }
+    .skill-item:hover {
+      transform: scale(1.1);
+    }
+    .timeline {
       position: relative;
-      transform-style: preserve-3d;
+      padding: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #ff6f00;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      margin: 40px 0;
+      position: relative;
+      animation: slideIn 0.8s ease-out;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-card {
+      background: #3a3a5e;
+      padding: 20px;
+      border-radius: 15px;
+      width: 45%;
+      box-shadow: 0 4px 20px rgba(255, 111, 0, 0.3);
       transition: transform 0.3s ease;
     }
-    .project-card:hover .project-card-inner {
-      transform: rotateY(10deg) rotateX(10deg);
+    .timeline-card.light-mode {
+      background: #fff;
     }
-    .project-card h3 {
-      color: #00f0ff;
+    .timeline-card.neon-mode {
+      background: #0a0a1a;
+      border: 1px solid #ff6f00;
+    }
+    .timeline-card:hover {
+      transform: scale(1.05);
+    }
+    .timeline-card h3 {
+      color: #ff6f00;
       font-size: 1.8rem;
-      margin-bottom: 15px;
-      text-shadow: 0 0 10px #00f0ff;
+      margin-bottom: 10px;
     }
-    .project-card p {
+    .timeline-card p {
       font-size: 1rem;
       color: #e0e0e0;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-    }
-    .modal-content {
-      background: #1a1a3a;
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 600px;
-      text-align: center;
-      border: 1px solid #00f0ff;
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
-    }
-    .modal-content h3 {
-      color: #ff00ff;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .modal-content p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-    .modal-content a {
-      color: #00f0ff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .modal-content button {
-      background: #ff00ff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      color: #fff;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-    }
-    .modal-content button:hover {
-      background: #cc00cc;
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: #ff6f00;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 15px rgba(255, 111, 0, 0.7);
     }
     .contact-form {
       display: flex;
@@ -229,24 +274,30 @@
     .contact-form input, .contact-form textarea {
       padding: 15px;
       border: none;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #e0e0e0;
+      border-radius: 10px;
+      background: #3a3a5e;
+      color: #f0f0f0;
       font-size: 1rem;
-      border: 1px solid #00f0ff;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .contact-form input.light-mode, .contact-form textarea.light-mode {
+      background: #e0e0e0;
+      color: #333;
     }
     .contact-form button {
       padding: 15px;
-      background: #ff00ff;
+      background: #ff6f00;
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 1.1rem;
-      transition: background 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 111, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .contact-form button:hover {
-      background: #cc00cc;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 111, 0, 0.6);
     }
     .contact-icons {
       display: flex;
@@ -262,20 +313,46 @@
     .contact-icons a:hover img {
       transform: scale(1.15);
     }
+    .scroll-indicator {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ff6f00;
+      font-size: 1.5rem;
+      animation: bounce 2s infinite;
+    }
     footer {
       text-align: center;
       padding: 40px 20px;
-      background: linear-gradient(180deg, #0a0a1a, #1a1a3a);
+      background: #2a2a4e;
       color: #777;
       font-size: 1rem;
     }
-    @keyframes neonGlow {
-      0% { text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
-      100% { text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+    footer.light-mode {
+      background: #e0e0e0;
+      color: #555;
+    }
+    footer.neon-mode {
+      background: #0a0a1a;
+      border-top: 1px solid #ff6f00;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 0.3; }
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
     @media (max-width: 768px) {
       .hero h2 {
@@ -284,15 +361,28 @@
       .hero .typing {
         font-size: 1.4rem;
       }
-      nav a {
-        margin: 0 10px;
-        font-size: 1rem;
+      header h1 {
+        font-size: 2rem;
       }
       .card {
         padding: 30px;
       }
-      .project-grid {
-        grid-template-columns: 1fr;
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .timeline-item:nth-child(even) {
+        flex-direction: column;
+      }
+      .timeline-card {
+        width: 80%;
+        margin-left: 40px;
+      }
+      .timeline-dot {
+        left: 20px;
       }
     }
     @media (max-width: 480px) {
@@ -303,8 +393,8 @@
         font-size: 1.1rem;
       }
       .profile-pic {
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
       }
       .card {
         padding: 20px;
@@ -313,76 +403,70 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header>
+    <div class="header-container">
+      <h1>King Bryden</h1>
+      <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('dark')">Dark</button>
+        <button class="theme-btn" onclick="setTheme('light')">Light</button>
+        <button class="theme-btn" onclick="setTheme('neon')">Neon</button>
+      </div>
+    </div>
+  </header>
 
   <section class="hero">
-    <div id="particles-js"></div>
-    <h2>King Bryden</h2>
+    <h2>King Bryden's World</h2>
     <div class="typing" id="typing"></div>
+    <a href="#about" class="scroll-indicator"><i class="fas fa-chevron-down"></i></a>
   </section>
 
   <section id="about" class="card">
     <h2>About Me</h2>
     <div class="about-content">
       <img src="https://github.com/Kingbryden.png" alt="GitHub Avatar" class="profile-pic">
-      <p>I'm <strong>King Bryden</strong>, a visionary full-stack developer and CEO of B2r Brand. I build cutting-edge bots, scalable web apps, and immersive digital experiences. My work in AI and automation transforms ideas into reality with a futuristic edge.</p>
+      <div>
+        <p>I'm <strong>King Bryden</strong>, a full-stack developer and CEO of B2r Brand. I craft innovative bots, scalable web apps, and dynamic digital experiences. My passion for AI and automation drives me to create solutions that push boundaries and inspire.</p>
+        <a href="#" class="resume-btn">Download Resume</a>
+      </div>
     </div>
   </section>
 
   <section id="skills" class="card">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <span>JavaScript</span>
-        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <span>Node.js</span>
-        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <span>React</span>
-        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <span>Python</span>
-        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <span>AI/ML</span>
-        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <span>UI/UX Design</span>
-        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-      </div>
+    <div class="skills-carousel">
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">Node.js</div>
+      <div class="skill-item">React</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">AI/ML</div>
+      <div class="skill-item">UI/UX Design</div>
+      <div class="skill-item">MongoDB</div>
+      <div class="skill-item">AWS</div>
     </div>
   </section>
 
   <section id="projects" class="card">
     <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card" onclick="openModal('ALPHA-BOT', 'An AI-powered WhatsApp bot with a robust admin panel for seamless automation.', 'https://github.com/Kingbryden/ALPHA-BOT')">
-        <div class="project-card-inner">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
           <h3>ALPHA-BOT</h3>
-          <p>AI-powered WhatsApp bot with admin panel for automation.</p>
+          <p>An AI-powered WhatsApp bot with a robust admin panel for seamless automation. <a href="https://github.com/Kingbryden/ALPHA-BOT" target="_blank">View on GitHub</a>.</p>
         </div>
       </div>
-      <div class="project-card" onclick="openModal('B2r Panel', 'A modern SMM panel with full backend and WhatsApp integration for social media growth.', 'https://b2rbrand.com')">
-        <div class="project-card-inner">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
           <h3>B2r Panel</h3>
-          <p>Modern SMM panel with WhatsApp integration.</p>
+          <p>A modern SMM panel with full backend and WhatsApp integration for social media growth. <a href="https://b2rbrand.com" target="_blank">Visit Live</a>.</p>
         </div>
       </div>
-      <div class="project-card" onclick="openModal('Dating Platform', 'AI-driven matchmaking platform with a custom backend for meaningful connections.', 'https://b2rbrand.site')">
-        <div class="project-card-inner">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
           <h3>Dating Platform</h3>
-          <p>AI-driven matchmaking platform for connections.</p>
+          <p>AI-driven matchmaking platform with a custom backend for meaningful connections. <a href="https://b2rbrand.site" target="_blank">Explore Now</a>.</p>
         </div>
       </div>
     </div>
@@ -413,52 +497,24 @@
         <img src="https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok" alt="TikTok Badge">
       </a>
       <a href="https://www.instagram.com/b2r_panel" target="_blank">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style-for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge">
       </a>
       <a href="https://x.com/b2r_panel" target="_blank">
         <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="X Badge">
       </a>
       <a href="https://www.linkedin.com/in/kingbryden" target="_blank">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style-for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
       </a>
     </div>
   </section>
 
-  <div id="projectModal" class="modal">
-    <div class="modal-content">
-      <h3 id="modalTitle"></h3>
-      <p id="modalDescription"></p>
-      <a id="modalLink" href="#" target="_blank">Visit Project</a>
-      <button onclick="closeModal()">Close</button>
-    </div>
-  </div>
-
   <footer>
-    <p>&copy; 2025 King Bryden. Powered by ⚡️ in Tanzania.</p>
+    <p>&copy; 2025 King Bryden. Built with 🔥 in Tanzania.</p>
   </footer>
 
   <script>
-    // Particles.js Configuration
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: ['#00f0ff', '#ff00ff'] },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: true },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: '#00f0ff', opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 2, direction: 'none', random: false }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-        modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
-      },
-      retina_detect: true
-    });
-
     // Typing Effect
-    const words = ['Full-Stack Developer', 'Bot Engineer', 'SMM Innovator', 'AI Visionary', 'Cyber Creator'];
+    const words = ['Full-Stack Developer', 'Bot Engineer', 'SMM Innovator', 'AI Visionary', 'Digital Creator'];
     let i = 0, j = 0, current = [], isDeleting = false;
 
     function typeEffect() {
@@ -483,15 +539,29 @@
     }
     typeEffect();
 
-    // Modal Functions
-    function openModal(title, description, link) {
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalDescription').textContent = description;
-      document.getElementById('modalLink').href = link;
-      document.getElementById('projectModal').style.display = 'flex';
-    }
-    function closeModal() {
-      document.getElementById('projectModal').style.display = 'none';
+    // Theme Switcher
+    function setTheme(theme) {
+      document.body.className = '';
+      document.querySelectorAll('.card').forEach(card => card.className = 'card');
+      document.querySelectorAll('.skill-item').forEach(item => item.className = 'skill-item');
+      document.querySelectorAll('.timeline-card').forEach(card => card.className = 'timeline-card');
+      document.querySelector('footer').className = '';
+      document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(input => input.className = '');
+
+      if (theme === 'light') {
+        document.body.classList.add('light-mode');
+        document.querySelectorAll('.card').forEach(card => card.classList.add('light-mode'));
+        document.querySelectorAll('.skill-item').forEach(item => item.classList.add('light-mode'));
+        document.querySelectorAll('.timeline-card').forEach(card => card.classList.add('light-mode'));
+        document.querySelector('footer').classList.add('light-mode');
+        document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(input => input.classList.add('light-mode'));
+      } else if (theme === 'neon') {
+        document.body.classList.add('neon-mode');
+        document.querySelectorAll('.card').forEach(card => card.classList.add('neon-mode'));
+        document.querySelectorAll('.skill-item').forEach(item => item.classList.add('neon-mode'));
+        document.querySelectorAll('.timeline-card').forEach(card => card.classList.add('neon-mode'));
+        document.querySelector('footer').classList.add('neon-mode');
+      }
     }
   </script>
 </body>
